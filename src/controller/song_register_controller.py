@@ -23,7 +23,7 @@ class SongRegisterController:
             raise Exception("Song title with more than 100 characters.")
 
         current_year = datetime.now().year
-        year = new_song_informations["year"]
+        year = int(new_song_informations["year"])
 
         if year >= current_year:
             raise Exception("Invalid music year.")
